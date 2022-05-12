@@ -11,6 +11,7 @@ local IsColor = IsColor
 local ToColor = ToColor
 local copyTable = table.Copy
 local stringSub = string.sub
+local type = type
 
 --[[
 
@@ -112,7 +113,7 @@ local tWeatherFX = {
         soundPath = "package///envmod/Client/resource/audio/envmod_rain.ogg",
         soundVolume = 0.5,
         particle = "envmod-assets::NS_Rain",
-        particleZGravity = -900,
+        particleZGravity = -2000,
         particleMaxAngularGravity = 20000
     },
     [ "Snow" ] = {
@@ -201,10 +202,10 @@ end
 
 function EnvMod:UpdateParticles()
     local fWindSpeed = self:GetWindSpeed()
-    local tWindAngle = Rotator( 0, self:GetWindAngle(), 0 )
+    local tWindDir = Rotator( 0, self:GetWindDirection(), 0 )
 
     for _, eParticle in pairs( tActiveParticles ) do
-        local tWindForward = tWindAngle:GetForwardVector() * ( fWindSpeed * ( eParticle:GetValue( "MaxAngularGravity", 0 ) / self._MaxWindSpeed ) )
+        local tWindForward = tWindDir:GetForwardVector() * ( fWindSpeed * ( eParticle:GetValue( "MaxAngularGravity", 0 ) / self._MaxWindSpeed ) )
         tWindForward.Z = eParticle:GetValue( "ZGravity", -400 )
 
         eParticle:SetParameterVector( "Gravity", tWindForward )

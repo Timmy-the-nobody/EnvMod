@@ -8,8 +8,8 @@
         WEATHER:SetSnow( true )
         WEATHER:SetThunder( true )
 
-        WEATHER:SetMinWind( 400 )
-        WEATHER:SetMaxWind( 400 )
+        WEATHER:SetMinWind( 100 )
+        WEATHER:SetMaxWind( 300 )
 
         WEATHER:SetSunLightIntensity( 150 )                                -- Sun light intensity
         WEATHER:SetFogDensity( 0.005 )                                     -- Fog density
@@ -35,8 +35,8 @@ WEATHER:SetThunder( true )
 WEATHER:SetMinTemperature( -2 )
 WEATHER:SetMaxTemperature( 16 )
 
-WEATHER:SetMinWind( 400 )
-WEATHER:SetMaxWind( 400 )
+WEATHER:SetMinWind( 100 )
+WEATHER:SetMaxWind( 300 )
 
 WEATHER:SetSunLightIntensity( 5 )
 WEATHER:SetFogDensity( 1.2 )

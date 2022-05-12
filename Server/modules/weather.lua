@@ -32,8 +32,8 @@ function EnvMod:UpdateWind()
     self:SetWindSpeed( fNewWindSpeed )
 
     -- Wind angle
-    local fWindAngle = self:GetWindAngle() + mathRandom( -45, 45 )
-    self:SetWindAngle( NanosMath.NormalizeAxis( fWindAngle ) )
+    local fWindAngle = self:GetWindDirection() + mathRandom( -25, 25 )
+    self:SetWindDirection( NanosMath.NormalizeAxis( fWindAngle ) )
 end
 
 --[[
@@ -101,7 +101,7 @@ function EnvMod:SetWindSpeed( fSpeed )
     EnvMod:SetNWVar( "windspeed", math.min( tonumber( fSpeed or 0 ), self._MaxWindSpeed ) )
 end
 
---[[ EnvMod:SetWindAngle ]]--
-function EnvMod:SetWindAngle( fAngle )
-    EnvMod:SetNWVar( "windangle", NanosMath.NormalizeAxis( tonumber( fAngle or 0 ) ) )
+--[[ EnvMod:SetWindDirection ]]--
+function EnvMod:SetWindDirection( fAngle )
+    EnvMod:SetNWVar( "winddirection", NanosMath.NormalizeAxis( tonumber( fAngle or 0 ) ) )
 end

@@ -1,4 +1,4 @@
-EnvMod._MaxWindSpeed = 400
+EnvMod._MaxWindSpeed = 300
 
 local tonumber = tonumber
 local mathAbs = math.abs
@@ -163,15 +163,15 @@ end
 
 --[[ EnvMod:GetFormattedWindSpeed ]]--
 function EnvMod:GetFormattedWindSpeed( bMPH )
-    return bMPH and ( ( self:GetWindSpeed() / 1.609344 ) .. "MPH" ) or ( self:GetWindSpeed() .. "Km/h" )
-end
-
---[[ EnvMod:GetWindAngle ]]--
-function EnvMod:GetWindAngle()
-    return self:GetNWVar( "windangle", 0 )
+    return bMPH and ( math.Round( self:GetWindSpeed() / 1.609344, 1 ) .. "MPH" ) or ( self:GetWindSpeed() .. "Km/h" )
 end
 
 --[[ EnvMod:GetWindDirection ]]--
+function EnvMod:GetWindDirection()
+    return self:GetNWVar( "winddirection", 0 )
+end
+
+--[[ EnvMod:GetFormattedWindDirection ]]--
 local tWindDir = {
     { range = -180, dir = "S" },
     { range = -135, dir = "S/W" },
@@ -184,8 +184,8 @@ local tWindDir = {
     { range = 180, dir = "S" },
 }
 
-function EnvMod:GetWindDirection()
-    local fAngle = self:GetWindAngle()
+function EnvMod:GetFormattedWindDirection()
+    local fAngle = self:GetWindDirection()
     local fClosest, iClosest = 360, 1
 
     for i, v in ipairs( tWindDir ) do

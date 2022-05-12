@@ -24,6 +24,8 @@ function EnvMod:SetTime( fTime )
             World.SetTime( self:GetHours(), self:GetMinutes() )
         end
     end
+
+    Events.Call( "EnvMod:OnTimeChange", fTime )
 end
 
 --[[
@@ -69,7 +71,7 @@ end
 ]]--
 
 function EnvMod:GetSeconds()
-    return mathFloor( mathRound( ( self.Time % 1 ) * 60, 2 ) )
+    return mathFloor( mathRound( ( self.Time % 1 ) * 59.99, 2 ) )
 end
 
 --[[
