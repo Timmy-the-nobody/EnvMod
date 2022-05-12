@@ -27,7 +27,6 @@ local tApplySetting = {
     [ "ws_skyRayleighScattering" ]     = function( vCol ) World.SetSkyRayleighScattering( ToColor( vCol ) ) end,
     [ "ws_sunTemperatureMultiplier" ]  = function( fVal ) World.SetSunTemperatureMultiplier( fVal ) end,
     [ "ws_skyLightIntensity" ]         = function( fVal ) World.SetSkyLightIntensity( fVal ) end,
-    -- [ "ws_wind" ]                      = function( fVal ) World.SetWind( fVal ) end
 }
 
 --[[

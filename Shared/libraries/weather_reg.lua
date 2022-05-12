@@ -82,8 +82,7 @@ function EnvMod:AddWeatherType( sName )
         ws_skyRayleighScattering = Color( 0.17, 0.41, 1.0 ),
         ws_sunLightColor = Color( 1.0, 0.9, 0.8 ),
         ws_sunLightIntensity = 150,
-        ws_sunTemperatureMultiplier = 1.0,
-        ws_wind = 0.25,
+        ws_sunTemperatureMultiplier = 1.0
     }
 
     setmetatable( tWeatherType, { __index = mt_Weather } )
