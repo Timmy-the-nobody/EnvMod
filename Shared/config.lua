@@ -38,3 +38,5 @@ EnvMod.Cfg.WindUpdateFrequency = 40                                     -- How o
 
 EnvMod.Cfg.ServerTimeUpdateRate = 1                                     -- How often the server will update the cached time (in real time seconds)
 EnvMod.Cfg.ServerTimeBroadcast = 120                                    -- How often the server will broadcast time to all clients (in real time seconds)
+
+EnvMod.Cfg.DrawDebugCanvas = true
