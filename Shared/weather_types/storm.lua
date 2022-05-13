@@ -30,19 +30,21 @@
 
 ]]--
 
-local WEATHER = EnvMod:AddWeatherType( "Cloudy" )
-WEATHER:SetChance( 35 )
+local WEATHER = EnvMod:AddWeatherType( "Storm" )
+WEATHER:SetChance( 5 )
+WEATHER:SetRain( true )
+WEATHER:SetThunder( true )
 
-WEATHER:SetMinTemperature( 10 )
-WEATHER:SetMaxTemperature( 26 )
+WEATHER:SetMinTemperature( -2 )
+WEATHER:SetMaxTemperature( 16 )
 
-WEATHER:SetMinWind( 5 )
-WEATHER:SetMaxWind( 35 )
+WEATHER:SetMinWind( 100 )
+WEATHER:SetMaxWind( 300 )
 
-WEATHER:SetSunLightIntensity( 10 )
-WEATHER:SetFogDensity( 0.1 )
-WEATHER:SetFogHeightFalloff( 0.01 )
-WEATHER:SetSunLightColor( Color( 1.0, 0.9, 0.8 ) )
+WEATHER:SetSunLightIntensity( 5 )
+WEATHER:SetFogDensity( 1.2 )
+WEATHER:SetFogHeightFalloff( 0.025 )
+WEATHER:SetSunLightColor( Color( 0.82, 0.9, 1.0 ) )
 WEATHER:SetSkyRayleighScattering( Color( 0.73, 0.8, 1.0 ) )
-WEATHER:SetSunTemperatureMultiplier( 1.25 )
-WEATHER:SetSkyLightIntensity( 0.2 )
+WEATHER:SetSunTemperatureMultiplier( 2 )
+WEATHER:SetSkyLightIntensity( 0.25 )

@@ -1,18 +1,18 @@
 local stringFormat = string.format
 
 local tMonths = {
-    [ 01 ] = { name = "January", days = 31 },
-    [ 02 ] = { name = "February", days = 28 },
-    [ 03 ] = { name = "March", days = 31 },
-    [ 04 ] = { name = "April", days = 30 },
-    [ 05 ] = { name = "May", days = 31 },
-    [ 06 ] = { name = "June", days = 30 },
-    [ 07 ] = { name = "July", days = 31 },
-    [ 08 ] = { name = "August", days = 31 },
-    [ 09 ] = { name = "September", days = 30 },
-    [ 10 ] = { name = "October", days = 31 },
-    [ 11 ] = { name = "November", days = 30 },
-    [ 12 ] = { name = "December", days = 31 },
+    [ 01 ] = { name = EnvMod.i18n[ "January" ], days = 31 },
+    [ 02 ] = { name = EnvMod.i18n[ "February" ], days = 28 },
+    [ 03 ] = { name = EnvMod.i18n[ "March" ], days = 31 },
+    [ 04 ] = { name = EnvMod.i18n[ "April" ], days = 30 },
+    [ 05 ] = { name = EnvMod.i18n[ "May" ], days = 31 },
+    [ 06 ] = { name = EnvMod.i18n[ "June" ], days = 30 },
+    [ 07 ] = { name = EnvMod.i18n[ "July" ], days = 31 },
+    [ 08 ] = { name = EnvMod.i18n[ "August" ], days = 31 },
+    [ 09 ] = { name = EnvMod.i18n[ "September" ], days = 30 },
+    [ 10 ] = { name = EnvMod.i18n[ "October" ], days = 31 },
+    [ 11 ] = { name = EnvMod.i18n[ "November" ], days = 30 },
+    [ 12 ] = { name = EnvMod.i18n[ "December" ], days = 31 },
 }
 
 --[[
@@ -84,6 +84,7 @@ end
 
 function EnvMod:GetFormattedDate( bNumeric, iDay )
     local iD, iM, iY = self:GetDate( iDay )
+
     local sD = stringFormat( "%02d", iD )
     local sM = bNumeric and stringFormat( "%02d", iM ) or tMonths[ iM ].name
     local sY = iY

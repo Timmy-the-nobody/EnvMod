@@ -26,7 +26,7 @@ end
 function EnvMod:UpdateWind()
     -- Wind speed
     local tWeather = self:GetWeather()
-    local fWindSpeed = self:GetWindSpeed() + mathRandom( -5, 5 )
+    local fWindSpeed = self:GetWindSpeed() + mathRandom( -10, 10 )
     local fNewWindSpeed = NanosMath.Clamp( fWindSpeed, tWeather:GetMinWind(), tWeather:GetMaxWind() )
 
     self:SetWindSpeed( fNewWindSpeed )
@@ -74,7 +74,9 @@ local function initTimers()
             end
         end
 
-        EnvMod:SetWeather( tMarked[ mathRandom( 1, #tMarked ) ] )
+        if ( #tMarked >= 1 ) then
+            EnvMod:SetWeather( tMarked[ mathRandom( 1, #tMarked ) ] )
+        end
     end, ( EnvMod.Cfg.WeatherChangeDelay * 1000 ) )
 end
 

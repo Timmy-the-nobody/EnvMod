@@ -1,4 +1,4 @@
-EnvMod = EnvMod or {} -- It's tea time!
+EnvMod = EnvMod or {}
 EnvMod.Cfg = EnvMod.Cfg or {}
 
 Package.Require( "libraries/includes.lua" )
@@ -11,6 +11,8 @@ for _, sPath in ipairs( Package.GetFiles( "Shared/weather_types", ".lua" ) ) do
 end
 
 Package.Require( "config.lua" )
+Package.Require( "i18n/" .. EnvMod.Cfg.Language .. ".lua" )
+
 Package.Require( "modules/day_handler.lua" )
 Package.Require( "modules/timecycle.lua" )
 Package.Require( "modules/weather.lua" )

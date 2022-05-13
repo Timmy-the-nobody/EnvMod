@@ -8,8 +8,11 @@
         WEATHER:SetSnow( true )
         WEATHER:SetThunder( true )
 
-        WEATHER:SetMinWind( 100 )
-        WEATHER:SetMaxWind( 300 )
+        WEATHER:SetMinTemperature( -2 )                                    -- Minimal temperture
+        WEATHER:SetMaxTemperature( 16 )                                    -- Maximal temperture
+
+        WEATHER:SetMinWind( 100 )                                          -- Minimal wind speed
+        WEATHER:SetMaxWind( 300 )                                          -- Maximal wind speed
 
         WEATHER:SetSunLightIntensity( 150 )                                -- Sun light intensity
         WEATHER:SetFogDensity( 0.005 )                                     -- Fog density
@@ -27,21 +30,20 @@
 
 ]]--
 
-local WEATHER = EnvMod:AddWeatherType( "Storm" )
+local WEATHER = EnvMod:AddWeatherType( "Snow" )
 WEATHER:SetChance( 15 )
-WEATHER:SetRain( true )
-WEATHER:SetThunder( true )
+WEATHER:SetSnow( true )
 
-WEATHER:SetMinTemperature( -2 )
-WEATHER:SetMaxTemperature( 16 )
+WEATHER:SetMinTemperature( -20 )
+WEATHER:SetMaxTemperature( 0 )
 
-WEATHER:SetMinWind( 100 )
-WEATHER:SetMaxWind( 300 )
+WEATHER:SetMinWind( 25 )
+WEATHER:SetMaxWind( 80 )
 
 WEATHER:SetSunLightIntensity( 5 )
-WEATHER:SetFogDensity( 1.2 )
+WEATHER:SetFogDensity( 0.2 )
 WEATHER:SetFogHeightFalloff( 0.025 )
 WEATHER:SetSunLightColor( Color( 0.82, 0.9, 1.0 ) )
-WEATHER:SetSkyRayleighScattering( Color( 0.73, 0.8, 1.0 ) )
+WEATHER:SetSkyRayleighScattering( Color( 0.8, 0.8, 1.0 ) )
 WEATHER:SetSunTemperatureMultiplier( 2 )
 WEATHER:SetSkyLightIntensity( 0.25 )

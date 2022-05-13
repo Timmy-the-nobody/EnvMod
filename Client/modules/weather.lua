@@ -112,15 +112,13 @@ local tWeatherFX = {
         soundPath = "package///envmod/Client/resource/audio/envmod_rain.ogg",
         soundVolume = 0.5,
         particle = "envmod-assets::NS_Rain",
-        particleZGravity = -2000,
-        particleMaxAngularGravity = 20000
+        particleMaxWindDir = 8000
     },
     [ "Snow" ] = {
         soundPath = "package///envmod/Client/resource/audio/envmod_snow.ogg",
         soundVolume = 0.5,
         particle = "envmod-assets::NS_Snow",
-        particleZGravity = -400,
-        particleMaxAngularGravity = 300
+        particleMaxWindDir = 2500
     },
     [ "Thunder" ] = {
         soundPath = "package///envmod/Client/resource/audio/envmod_thunder.ogg",
@@ -154,9 +152,7 @@ function EnvMod:OnWeatherChangeInternal( tNewWeather, tOldWeather )
             if tFX.particle then
                 if not tActiveParticles[ sFunc ] or not tActiveParticles[ sFunc ]:IsValid() then
                     tActiveParticles[ sFunc ] = Particle( Client.GetLocalPlayer():GetCameraLocation(), Rotator(), tFX.particle, false, true )
-                    tActiveParticles[ sFunc ]:SetValue( "ZGravity", tFX.particleZGravity )
-                    tActiveParticles[ sFunc ]:SetValue( "MaxAngularGravity", tFX.particleMaxAngularGravity )
-                    --tActiveParticles[ sFunc ]:SetParameterFloat( "SpawnRate", 250000 )
+                    tActiveParticles[ sFunc ]:SetValue( "MaxWindDir", tFX.particleMaxWindDir )
 
                     if not particlesPosTick then
                         particlesPosTick = Client.Subscribe( "Tick", function( fDelta )
@@ -204,9 +200,7 @@ function EnvMod:UpdateParticles()
     local tWindDir = Rotator( 0, self:GetWindDirection(), 0 )
 
     for _, eParticle in pairs( tActiveParticles ) do
-        local tWindForward = tWindDir:GetForwardVector() * ( fWindSpeed * ( eParticle:GetValue( "MaxAngularGravity", 0 ) / self._MaxWindSpeed ) )
-        tWindForward.Z = eParticle:GetValue( "ZGravity", -400 )
-
-        eParticle:SetParameterVector( "Gravity", tWindForward )
+        local tWindForward = tWindDir:GetForwardVector() * ( fWindSpeed * ( eParticle:GetValue( "MaxWindDir", 0 ) / self._MaxWindSpeed ) )
+        eParticle:SetParameterVector( "WindDir", tWindForward )
     end
 end

@@ -1,10 +1,10 @@
 local aWindSound = Sound( Vector(), "package///envmod/Client/resource/audio/envmod_blizzard.ogg", true, false, SoundType.SFX, 0, 1, 0, 0, 0, false, SoundLoopMode.Forever )
 
 
--- CANVAS
-local cDebug = false
+--[[ Debug Canvas ]]--
+
 if EnvMod.Cfg.DrawDebugCanvas then
-    cDebug = Canvas( true, Color.TRANSPARENT, -1 )
+    EnvMod.DebugCanvas = Canvas( true, Color.TRANSPARENT, -1 )
 
     local tInfos = {
         function() return "Time: " .. EnvMod:GetFormattedTime( true ) end,
@@ -21,22 +21,22 @@ if EnvMod.Cfg.DrawDebugCanvas then
         function() return "Wind direction: " .. EnvMod:GetFormattedWindDirection() .. " [" .. EnvMod:GetWindDirection() .. "°]" end
     }
 
-    cDebug:Subscribe("Update", function( self, iW, iH )
+    EnvMod.DebugCanvas:Subscribe("Update", function( self, iW, iH )
         for k, v in ipairs( tInfos ) do
             self:DrawText( v(), Vector2D( 15, ( k * 18 ) ), FontType.Oswald )
         end
     end )
 
-    cDebug:Repaint()
+    EnvMod.DebugCanvas:Repaint()
 end
 
 function EnvMod:UpdateDebugCanvas()
-    if cDebug then
-        cDebug:Repaint()
+    if self.DebugCanvas then
+        self.DebugCanvas:Repaint()
     end
 end
--- CANVAS END
 
+--[[ Vars update ]]--
 
 local tVars = {
     [ "windspeed" ] = function( xValue )

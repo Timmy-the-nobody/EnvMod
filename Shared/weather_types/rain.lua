@@ -4,6 +4,16 @@
 
         local WEATHER = EnvMod:AddWeatherType( "Weather Name" )            -- Register a new weather type, and set it's name
         WEATHER:SetChance( 50 )                                            -- Percentage of chance to switch to this weather type (0-100)
+        WEATHER:SetRain( true )
+        WEATHER:SetSnow( true )
+        WEATHER:SetThunder( true )
+
+        WEATHER:SetMinTemperature( -2 )                                    -- Minimal temperture
+        WEATHER:SetMaxTemperature( 16 )                                    -- Maximal temperture
+
+        WEATHER:SetMinWind( 100 )                                          -- Minimal wind speed
+        WEATHER:SetMaxWind( 300 )                                          -- Maximal wind speed
+
         WEATHER:SetSunLightIntensity( 150 )                                -- Sun light intensity
         WEATHER:SetFogDensity( 0.005 )                                     -- Fog density
         WEATHER:SetFogHeightFalloff( 0.2 )                                 -- Fog height falloff
@@ -20,13 +30,15 @@
 
 ]]--
 
-local WEATHER = EnvMod:AddWeatherType( "Rainy" )
+local WEATHER = EnvMod:AddWeatherType( "Rain" )
 WEATHER:SetChance( 25 )
--- WEATHER:SetRain( true )
-WEATHER:SetSnow( true )
+WEATHER:SetRain( true )
 
-WEATHER:SetMinTemperature( -1 )
-WEATHER:SetMaxTemperature( 18 )
+WEATHER:SetMinTemperature( 5 )
+WEATHER:SetMaxTemperature( 28 )
+
+WEATHER:SetMinWind( 25 )
+WEATHER:SetMaxWind( 80 )
 
 WEATHER:SetSunLightIntensity( 10 )
 WEATHER:SetFogDensity( 0.025 )
@@ -35,9 +47,3 @@ WEATHER:SetSunLightColor( Color( 0.82, 0.9, 1.0 ) )
 WEATHER:SetSkyRayleighScattering( Color( 0.73, 0.8, 1.0 ) )
 WEATHER:SetSunTemperatureMultiplier( 2 )
 WEATHER:SetSkyLightIntensity( 0.3 )
-
-function WEATHER:OnStart()
-end
-
-function WEATHER:OnEnd()
-end
