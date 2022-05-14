@@ -10,6 +10,81 @@
 # **EnvMod API**
 Here you'll find a list of usefull functions to interract with EnvMod
 
+## Events
+<details><summary>Events list</summary>
+
+### [🔹🔸][both] `"EnvMod:OnLoaded"`
+###### Called once EnvMod if fully loaded
+
+### [🔹🔸][both] `"EnvMod:OnTimeChange"`
+###### Called after a time updated
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | The new time (from 0 to 1440)
+</details>
+
+### [🔹🔸][both] `"EnvMod:OnNewDayStarted"`
+###### Called when a new day started
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | The new day
+</details>
+
+### [🔹🔸][both] `"EnvMod:OnDayStart"`
+###### Called when the day cycle started
+
+### [🔹🔸][both] `"EnvMod:OnNightStart"`
+Called when the night cycle started
+
+### [🔹🔸][both] `"EnvMod:OnWeatherChange"`
+###### Called on weather change
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [table]               | The new weather type
+| [table]               | The old weather type
+</details>
+
+### [🔹🔸][both] `"EnvMod:OnWindSpeedChange"`
+###### Called after the wind speed has changed
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | The new wind speed
+| [number]              | The old wind speed
+</details>
+
+### [🔹🔸][both] `"EnvMod:OnWindSpeedChange"`
+###### Called after the wind direction has changed
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | The new wind direction
+| [number]              | The old wind direction
+</details>
+
+### [🔹🔸][both] `"EnvMod:OnTemperatureChange"`
+###### Called after the temperature has changed
+<details><summary>Parameters</summary>
+
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | The new temperature
+| [number]              | The old temperature
+</details>
+</details>
+
+## Functions
+
+<details><summary>Weather functions</summary>
+
 ## ***Weather functions***
 
 ### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
@@ -78,6 +153,9 @@ Return if there's thunder
 | 🔹🔸 EnvMod:IsSnowing                 | Return if it's snowing | | Is snowing (bool)
 | 🔹🔸 EnvMod:IsThunder                 | Return if there's thunder | | Is thunder (bool)
 -->
+</details>
+
+<details><summary>Date functions</summary>
 
 ## ***Date functions***
 
@@ -119,6 +197,9 @@ Returns the formatted date
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [string]              | Formatted date
+</details>
+
+<details><summary>Wind functions</summary>
 
 ## ***Wind functions***
 
@@ -165,6 +246,9 @@ Return the actual formatted wind direction (N/E, S/W, N, etc..)
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [string]              | Formatted wind direction
+</details>
+
+<details><summary>Temperature functions</summary>
 
 ## ***Temperature functions***
 
@@ -219,3 +303,5 @@ Util function that converts a temperature in Fehrenheit to Celcius
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [number]              | Converted temperature, in °C
+
+</details>

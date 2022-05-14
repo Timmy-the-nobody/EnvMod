@@ -1,5 +1,11 @@
 EnvMod.NWVars = {}
 
+local tAddEvents = {
+    [ "windspeed" ] = "EnvMod:OnWindSpeedChange",
+    [ "winddirection" ] = "EnvMod:OnWindDirectionChange",
+    [ "temperature" ] = "EnvMod:OnTemperatureChange",
+}
+
 --[[
 
     EnvMod:SetNWVar
@@ -15,6 +21,10 @@ function EnvMod:SetNWVar( sKey, xValue )
     end
 
     Events.Call( "EnvMod:OnNWVarChange", sKey, xValue, xOld )
+
+    if tAddEvents[ sKey ] then
+        Events.Call( tAddEvents[ sKey ], xValue, xOld )
+    end
 end
 
 --[[
