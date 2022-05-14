@@ -11,6 +11,7 @@ As its name suggests, EnvMod is a mod to extend the environment possibilities in
 - Dynamic wind speed and direction that affects weather effects
 - Date system
 - Time system
+- Smooth weather transitions
 - etc..
 
 ## 📘 Wiki
