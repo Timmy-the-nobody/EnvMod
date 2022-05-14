@@ -1,5 +1,5 @@
 # ⛅ EnvMod
-As its name suggests, EnvMod is a mod to extend the environment possibilities in Nanos World.
+As its name suggests, EnvMod is a mod to extend the environment possibilities in Nanos World!
 
 ![](https://github.com/Timmy-the-nobody/EnvMod/blob/main/envmod_logo.png)
 
