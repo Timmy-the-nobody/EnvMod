@@ -152,15 +152,69 @@ Return if there's thunder
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [boolean]             | Is thunder
+</details>
 
-<!-- | 🔹🔸 EnvMod:SetWeather                | Set the weather type            | Weather type (string/number) | Success (bool)
-| 🔹🔸 EnvMod:GetWeather                | Get the current weather metatable  | | Weather type (table)
-| 🔹🔸 EnvMod:GetWeatherType            | Get the passed weather metatable | Weather ID (number) | Weather type (table)
-| 🔹🔸 EnvMod:GetWeatherID              | Get the actual weather ID     | | Weather ID (number)
-| 🔹🔸 EnvMod:IsRaining                 | Return if it's raining | | Is raining (bool)
-| 🔹🔸 EnvMod:IsSnowing                 | Return if it's snowing | | Is snowing (bool)
-| 🔹🔸 EnvMod:IsThunder                 | Return if there's thunder | | Is thunder (bool)
--->
+<details><summary>⌚ Time functions</summary>
+
+### [🔹🔸][both] `EnvMod:SetTime( iTime )`
+Set the current time (will be networked to all players when called on server)
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number]              | iTime             |                   | Time (0-1440)
+
+### [🔹🔸][both] `EnvMod:GetTime()`
+Returns the current time
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Actual time (0-1440)
+
+### [🔹🔸][both] `EnvMod:GetHours()`
+Returns the current hours
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Actual hours (0-24)
+
+### [🔹🔸][both] `EnvMod:GetMinutes()`
+Returns the current minutes
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Actual minutes (0-60)
+
+### [🔹🔸][both] `EnvMod:GetSeconds()`
+Returns the current seconds
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Actual minutes (0-60)
+
+### [🔹🔸][both] `EnvMod:GetFormattedTime( bReturnSeconds )`
+Formatted time, with leading "0" for minutes and seconds, in the "00:00" format
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [boolean]             | bReturnSeconds    | `false`           | Show seconds
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [string]               | Formatted time
+
+### [🔹🔸][both] `EnvMod:IsDay()`
+Returns if we're in a day cycle
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | Is day
+
+### [🔹🔸][both] `EnvMod:IsNight()`
+Returns if we're in a night cycle
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | Is night
 </details>
 
 <details><summary>📆 Date functions</summary>

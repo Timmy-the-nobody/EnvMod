@@ -101,8 +101,6 @@ function EnvMod:GetFormattedTime( bReturnSeconds )
     return sHours .. ":" .. sMinutes .. sSeconds .. sSuffix
 end
 
-print( EnvMod:GetFormattedTime( ) )
-
 --[[
 
     EnvMod:GetNightLength
