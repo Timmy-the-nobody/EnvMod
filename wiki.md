@@ -19,7 +19,7 @@
 Unlike functions, EnvMod events will be sent to all packages
 
 ## 🛠️ Configuration
-- Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
+- Edit the script to your liking by going to [`envmod/Shared/config.lua`](https://github.com/Timmy-the-nobody/EnvMod/blob/main/Shared/config.lua), some settings require a server restart
 
 ## 🖥️ Console commands
 - Type `envmod help` in your server-side console to display all available commands, their arguments and their descriptions.
