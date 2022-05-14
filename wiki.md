@@ -8,10 +8,9 @@
 [both]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#both-sides
 
 # **EnvMod API**
-Here you'll find a list of usefull functions to interract with EnvMod
 
 ## Events
-<details><summary>Events list</summary>
+<details><summary>🔥 Events list</summary>
 
 ### [🔹🔸][both] `"EnvMod:OnLoaded"`
 ###### Called once EnvMod if fully loaded
@@ -83,9 +82,7 @@ Called when the night cycle started
 
 ## Functions
 
-<details><summary>Weather functions</summary>
-
-## ***Weather functions***
+<details><summary>⛅ Weather functions</summary>
 
 ### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
 Set the current weather type (will be networked to all players when called on server)
@@ -155,9 +152,7 @@ Return if there's thunder
 -->
 </details>
 
-<details><summary>Date functions</summary>
-
-## ***Date functions***
+<details><summary>📆 Date functions</summary>
 
 ### [🔹][server] `EnvMod:SetDay( iDay )`
 Set the current day (will be networked to all players)
@@ -199,9 +194,7 @@ Returns the formatted date
 | [string]              | Formatted date
 </details>
 
-<details><summary>Wind functions</summary>
-
-## ***Wind functions***
+<details><summary>💨 Wind functions</summary>
 
 <!-- ### [🔹][server] `EnvMod:SetWindSpeed( fSpeed )`
 Set the actual wind speed (will be networked to all players)
@@ -248,9 +241,7 @@ Return the actual formatted wind direction (N/E, S/W, N, etc..)
 | [string]              | Formatted wind direction
 </details>
 
-<details><summary>Temperature functions</summary>
-
-## ***Temperature functions***
+<details><summary>🌡️ Temperature functions</summary>
 
 <!-- ### [🔹][server] `EnvMod:SetTemperature( fTemperature, bFahrenheit )`
 Set the current temperature on the server (will be networked to all players)
