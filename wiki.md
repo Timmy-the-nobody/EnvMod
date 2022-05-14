@@ -12,6 +12,9 @@
 ## 🛠️ Configuration
 Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
 
+## 🖥️ Console commands
+Type `envmod help` in your server-side console to display all available commands, their arguments and their descriptions.
+
 ## ⛅ Weather types
 To create a new weather type, copy one of the existing weather types in `envmod/Shared/weather_types/` and paste it in the same folder, by remaning it to something unique like `YOUR_NEW_WEATHER.lua`
 
