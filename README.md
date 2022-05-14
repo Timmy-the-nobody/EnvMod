@@ -1,7 +1,7 @@
-![](https://github.com/Timmy-the-nobody/EnvMod/blob/main/envmod_logo.png)
-
-## ⛅ EnvMod
+# ⛅ EnvMod
 As its name suggests, EnvMod is a mod to extend the environment possibilities in Nanos World.
+
+![](https://github.com/Timmy-the-nobody/EnvMod/blob/main/envmod_logo.png)
 
 ## 📘 Wiki
 You can find the documentation for EnvMod [here.][1]
