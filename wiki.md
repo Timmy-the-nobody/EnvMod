@@ -10,6 +10,116 @@
 # **EnvMod API**
 Here you'll find a list of usefull functions to interract with EnvMod
 
+## ***Weather functions***
+
+### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
+Set the current weather type (will be networked to all players when called on server)
+###### Parameters
+| Type                          | Parameter         | Default Value     | Description  |
+| --------------------          |:----------------  |:----------------- |:------------- 
+| [number] or [string]          | xWeather          |                   | Weather type (ID or name)
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | If weather was changed successfully
+
+
+### [🔹🔸][both] `EnvMod:GetWeather()`
+Get the current weather type metatable, usefull to access it's functions
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [table]               | Weather type
+
+### [🔹🔸][both] `EnvMod:GetWeatherType( iWeatherID )`
+Get a weather type metatable, usefull to access it's functions
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number]              | iWeatherID        |                   | Weather type (ID)
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [table]               | Weather type
+
+### [🔹🔸][both] `EnvMod:GetWeatherID()`
+Get the actual weather ID
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Weather ID
+
+### [🔹🔸][both] `EnvMod:IsRaining()`
+Return if it's raining
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | Is raining
+
+### [🔹🔸][both] `EnvMod:IsSnowing()`
+Return if it's snowing
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | Is snowing
+
+### [🔹🔸][both] `EnvMod:IsThunder()`
+Return if there's thunder
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [boolean]             | Is thunder
+
+<!-- | 🔹🔸 EnvMod:SetWeather                | Set the weather type            | Weather type (string/number) | Success (bool)
+| 🔹🔸 EnvMod:GetWeather                | Get the current weather metatable  | | Weather type (table)
+| 🔹🔸 EnvMod:GetWeatherType            | Get the passed weather metatable | Weather ID (number) | Weather type (table)
+| 🔹🔸 EnvMod:GetWeatherID              | Get the actual weather ID     | | Weather ID (number)
+| 🔹🔸 EnvMod:IsRaining                 | Return if it's raining | | Is raining (bool)
+| 🔹🔸 EnvMod:IsSnowing                 | Return if it's snowing | | Is snowing (bool)
+| 🔹🔸 EnvMod:IsThunder                 | Return if there's thunder | | Is thunder (bool)
+-->
+
+## ***Date functions***
+
+### [🔹][server] `EnvMod:SetDay( iDay )`
+Set the current day (will be networked to all players)
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number]              | iDay              |                   | The day to set
+
+### [🔹🔸][both] `EnvMod:GetDay()`
+Returns the current day
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Day
+
+### [🔹🔸][both] `EnvMod:GetDate( iDay )`
+Returns a date, month and year, based on a certain day
+###### Parameters
+| Type                  | Parameter         | Default Value         | Description  |
+| --------------------  |:----------------  |:-----------------     |:------------- 
+| [number]              | iDay              | `nil` (actual day)    | The day you want to convert to dd, mm, yyyy
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Day
+| [number]              | Month
+| [number]              | Year
+
+### [🔹🔸][both] `EnvMod:GetFormattedDate( bNumeric, iDay )`
+Returns the formatted date
+###### Parameters
+| Type                  | Parameter         | Default Value         | Description  |
+| --------------------  |:----------------  |:-----------------     |:------------- 
+| [number]              | bNumeric          | `false`               | true: Format to DD-MM-YYYY if true, false: DD Month YYYY
+| [number]              | iDay              | `nil` (actual day)    | The day you want to format
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [string]              | Formatted date
+
 ## ***Wind functions***
 
 <!-- ### [🔹][server] `EnvMod:SetWindSpeed( fSpeed )`
@@ -88,122 +198,8 @@ Get the current temperature, formatted in the format "00°UNIT" (30°C, 98°F, e
 | --------------------  |:------------- 
 | [string]              | Formatted temperature
 
-## ***Weather functions***
-
-### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
-Set the current weather type (will be networked to all players when called on server)
-###### Parameters
-| Type                          | Parameter         | Default Value     | Description  |
-| --------------------          |:----------------  |:----------------- |:------------- 
-| [number] or [string]          | xWeather          |                   | Weather type (ID or name)
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [boolean]             | If weather was changed successfully
-
-
-### [🔹🔸][both] `EnvMod:GetWeather()`
-Get the current weather type metatable, usefull to access it's functions
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [table]               | Weather type
-
-### [🔹🔸][both] `EnvMod:GetWeatherType( iWeatherID )`
-Get a weather type metatable, usefull to access it's functions
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number]              | iWeatherID        |                   | Weather type (ID)
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [table]               | Weather type
-
-### [🔹🔸][both] `EnvMod:GetWeatherID()`
-Get the actual weather ID
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [number]              | Weather ID
-
-### [🔹🔸][both] `EnvMod:IsRaining()`
-Return if it's raining
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [boolean]             | Is raining
-
-### [🔹🔸][both] `EnvMod:IsSnowing()`
-Return if it's snowing
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [boolean]             | Is snowing
-
-### [🔹🔸][both] `EnvMod:IsThunder()`
-Return if there's thunder
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [boolean]             | Is thunder
-
-<!-- | 🔹🔸 EnvMod:SetWeather                | Set the weather type            | Weather type (string/number) | Success (bool)
-| 🔹🔸 EnvMod:GetWeather                | Get the current weather metatable  | | Weather type (table)
-| 🔹🔸 EnvMod:GetWeatherType            | Get the passed weather metatable | Weather ID (number) | Weather type (table)
-| 🔹🔸 EnvMod:GetWeatherID              | Get the actual weather ID     | | Weather ID (number)
-| 🔹🔸 EnvMod:IsRaining                 | Return if it's raining | | Is raining (bool)
-| 🔹🔸 EnvMod:IsSnowing                 | Return if it's snowing | | Is snowing (bool)
-| 🔹🔸 EnvMod:IsThunder                 | Return if there's thunder | | Is thunder (bool)
--->
-
-
-
-## ***Date functions***
-
-### [🔹][server] `EnvMod:SetDay( iDay )`
-Set the current day (will be networked to all players)
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number]              | iDay              |                   | The day to set
-
-### [🔹🔸][both] `EnvMod:GetDay()`
-Returns the current day
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [number]              | Day
-
-### [🔹🔸][both] `EnvMod:GetDate( iDay )`
-Returns a date, month and year, based on a certain day
-###### Parameters
-| Type                  | Parameter         | Default Value         | Description  |
-| --------------------  |:----------------  |:-----------------     |:------------- 
-| [number]              | iDay              | `nil` (actual day)    | The day you want to convert to dd, mm, yyyy
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [number]              | Day
-| [number]              | Month
-| [number]              | Year
-
-### [🔹🔸][both] `EnvMod:GetFormattedDate( bNumeric, iDay )`
-Returns the formatted date
-###### Parameters
-| Type                  | Parameter         | Default Value         | Description  |
-| --------------------  |:----------------  |:-----------------     |:------------- 
-| [number]              | bNumeric          | `false`               | true: Format to DD-MM-YYYY if true, false: DD Month YYYY
-| [number]              | iDay              | `nil` (actual day)    | The day you want to format
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [string]              | Formatted date
-
-## ***Util functions***
-
 ### [🔹🔸][both] `EnvMod:CelciusToFahrenheit( fTemperature )`
-Converts a temperature in Celcius to Fehrenheit
+Util function that converts a temperature in Celcius to Fehrenheit
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
 | --------------------  |:----------------  |:----------------- |:------------- 
@@ -214,7 +210,7 @@ Converts a temperature in Celcius to Fehrenheit
 | [number]              | Converted temperature, in °F
 
 ### [🔹🔸][both] `EnvMod:FahrenheitToCelcius( fTemperature )`
-Converts a temperature in Fehrenheit to Celcius
+Util function that converts a temperature in Fehrenheit to Celcius
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
 | --------------------  |:----------------  |:----------------- |:------------- 
