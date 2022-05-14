@@ -4,10 +4,10 @@ As its name suggests, EnvMod is a mod to extend the environment possibilities in
 ![](https://github.com/Timmy-the-nobody/EnvMod/blob/main/envmod_logo.png)
 
 ## 👀 Main features
-- Day/night cycle
+- Day and night cycles
 - Weather types
 - Weather effects
-- Dynamic Temperature support
+- Dynamic temperature
 - Dynamic wind speed and direction that affects weather effects
 - Date system
 - Time system
