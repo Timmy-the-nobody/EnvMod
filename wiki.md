@@ -24,21 +24,21 @@ Set the actual wind direction between -180 and 180 (will be networked to all pla
 | Type                  | Parameter         | Default Value     | Description  |
 | --------------------  |:----------------  |:----------------- |:------------- 
 | [number][number]           | fDirection        |                   | The wind direction to set -->
-#### [🔹🔸][both] `EnvMod:GetWindSpeed()`
+### [🔹🔸][both] `EnvMod:GetWindSpeed()`
 Get the current wind speed
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [number]              | Current wind speed, in Km/h
 
-#### [🔹🔸][both] `EnvMod:GetWindDirection()`
+### [🔹🔸][both] `EnvMod:GetWindDirection()`
 Get the current wind direction between -180 and 180
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [number]              | Current wind direction
 
-#### [🔹🔸][both] `EnvMod:GetFormattedWindSpeed( bMPH )`
+### [🔹🔸][both] `EnvMod:GetFormattedWindSpeed( bMPH )`
 Return the actual formatted wind speed, formatted in the format "00UNIT" (30Km/h, 98MPH, etc..)
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
@@ -49,7 +49,7 @@ Return the actual formatted wind speed, formatted in the format "00UNIT" (30Km/h
 | --------------------  |:------------- 
 | [string]              | Formatted wind speed
 
-#### [🔹🔸][both] `EnvMod:GetFormattedWindDirection()`
+### [🔹🔸][both] `EnvMod:GetFormattedWindDirection()`
 Return the actual formatted wind direction (N/E, S/W, N, etc..)
 ###### Returns
 | Type                  | Description  |
@@ -58,15 +58,15 @@ Return the actual formatted wind direction (N/E, S/W, N, etc..)
 
 ## ***Temperature functions***
 
-#### [🔹][server] `EnvMod:SetTemperature( fTemperature, bFahrenheit )`
+<!-- ### [🔹][server] `EnvMod:SetTemperature( fTemperature, bFahrenheit )`
 Set the current temperature on the server (will be networked to all players)
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
 | --------------------  |:----------------  |:----------------- |:------------- 
 | [number]              | fTemperature      |                   | The temperature to set
-| [boolean]             | bFahrenheit       | `false`           | Use the fahrenheit unit instead of celcius
+| [boolean]             | bFahrenheit       | `false`           | Use the fahrenheit unit instead of celcius -->
 
-#### [🔹🔸][both] `EnvMod:GetTemperature( bFahrenheit )`
+### [🔹🔸][both] `EnvMod:GetTemperature( bFahrenheit )`
 Get the current temperature
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
@@ -77,7 +77,7 @@ Get the current temperature
 | --------------------  |:------------- 
 | [number]              | Current temperature
 
-#### [🔹🔸][both] `EnvMod:GetFormattedTemperature( bFahrenheit )`
+### [🔹🔸][both] `EnvMod:GetFormattedTemperature( bFahrenheit )`
 Get the current temperature, formatted in the format "00°UNIT" (30°C, 98°F, etc..)
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
@@ -90,7 +90,7 @@ Get the current temperature, formatted in the format "00°UNIT" (30°C, 98°F, e
 
 ## ***Weather functions***
 
-#### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
+### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
 Set the current weather type (will be networked to all players when called on server)
 ###### Parameters
 | Type                          | Parameter         | Default Value     | Description  |
@@ -102,14 +102,14 @@ Set the current weather type (will be networked to all players when called on se
 | [boolean]             | If weather was changed successfully
 
 
-#### [🔹🔸][both] `EnvMod:GetWeather()`
+### [🔹🔸][both] `EnvMod:GetWeather()`
 Get the current weather type metatable, usefull to access it's functions
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [table]               | Weather type
 
-#### [🔹🔸][both] `EnvMod:GetWeatherType( iWeatherID )`
+### [🔹🔸][both] `EnvMod:GetWeatherType( iWeatherID )`
 Get a weather type metatable, usefull to access it's functions
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
@@ -120,28 +120,28 @@ Get a weather type metatable, usefull to access it's functions
 | --------------------  |:------------- 
 | [table]               | Weather type
 
-#### [🔹🔸][both] `EnvMod:GetWeatherID()`
+### [🔹🔸][both] `EnvMod:GetWeatherID()`
 Get the actual weather ID
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [number]              | Weather ID
 
-#### [🔹🔸][both] `EnvMod:IsRaining()`
+### [🔹🔸][both] `EnvMod:IsRaining()`
 Return if it's raining
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [boolean]             | Is raining
 
-#### [🔹🔸][both] `EnvMod:IsSnowing()`
+### [🔹🔸][both] `EnvMod:IsSnowing()`
 Return if it's snowing
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [boolean]             | Is snowing
 
-#### [🔹🔸][both] `EnvMod:IsThunder()`
+### [🔹🔸][both] `EnvMod:IsThunder()`
 Return if there's thunder
 ###### Returns
 | Type                  | Description  |
@@ -157,47 +157,25 @@ Return if there's thunder
 | 🔹🔸 EnvMod:IsThunder                 | Return if there's thunder | | Is thunder (bool)
 -->
 
-## ***Util functions***
 
-#### [🔹🔸][both] `EnvMod:CelciusToFahrenheit( fTemperature )`
-Converts a temperature in Celcius to Fehrenheit
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number]              | fTemperature      |                   | Temperature to convert, in °C
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [number]              | Converted temperature, in °F
-
-#### [🔹🔸][both] `EnvMod:FahrenheitToCelcius( fTemperature )`
-Converts a temperature in Fehrenheit to Celcius
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number]              | fTemperature      |                   | Temperature to convert, in °F
-###### Returns
-| Type                  | Description  |
-| --------------------  |:------------- 
-| [number]              | Converted temperature, in °C
 
 ## ***Date functions***
 
-#### [🔹][server] `EnvMod:SetDay( iDay )`
+### [🔹][server] `EnvMod:SetDay( iDay )`
 Set the current day (will be networked to all players)
 ###### Parameters
 | Type                  | Parameter         | Default Value     | Description  |
 | --------------------  |:----------------  |:----------------- |:------------- 
 | [number]              | iDay              |                   | The day to set
 
-#### [🔹🔸][both] `EnvMod:GetDay()`
+### [🔹🔸][both] `EnvMod:GetDay()`
 Returns the current day
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [number]              | Day
 
-#### [🔹🔸][both] `EnvMod:GetDate( iDay )`
+### [🔹🔸][both] `EnvMod:GetDate( iDay )`
 Returns a date, month and year, based on a certain day
 ###### Parameters
 | Type                  | Parameter         | Default Value         | Description  |
@@ -210,7 +188,7 @@ Returns a date, month and year, based on a certain day
 | [number]              | Month
 | [number]              | Year
 
-#### [🔹🔸][both] `EnvMod:GetFormattedDate( bNumeric, iDay )`
+### [🔹🔸][both] `EnvMod:GetFormattedDate( bNumeric, iDay )`
 Returns the formatted date
 ###### Parameters
 | Type                  | Parameter         | Default Value         | Description  |
@@ -221,3 +199,27 @@ Returns the formatted date
 | Type                  | Description  |
 | --------------------  |:------------- 
 | [string]              | Formatted date
+
+## ***Util functions***
+
+### [🔹🔸][both] `EnvMod:CelciusToFahrenheit( fTemperature )`
+Converts a temperature in Celcius to Fehrenheit
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number]              | fTemperature      |                   | Temperature to convert, in °C
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Converted temperature, in °F
+
+### [🔹🔸][both] `EnvMod:FahrenheitToCelcius( fTemperature )`
+Converts a temperature in Fehrenheit to Celcius
+###### Parameters
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number]              | fTemperature      |                   | Temperature to convert, in °F
+###### Returns
+| Type                  | Description  |
+| --------------------  |:------------- 
+| [number]              | Converted temperature, in °C
