@@ -29,8 +29,8 @@ end
 
 --[[
 
-    EnvMod:GetDay
-        desc: Get the current day
+    EnvMod:SetDay
+        desc: Set the current day
         return: Day (number)
 
 ]]--

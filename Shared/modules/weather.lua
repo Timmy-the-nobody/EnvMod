@@ -20,7 +20,7 @@ function EnvMod:SetWeather( xWeather )
     -- Invalid weather type or ID
     if not tNewWeather then
         Package.Warn( "[EnvMod] Attempting to set an invalid weather type (" .. tostring( xWeather or "N/A" ) .. ")" )
-        return
+        return false
     end
 
     local iCurWeatherID, iNewWeatherID = self:GetWeatherID(), tNewWeather:GetID()
