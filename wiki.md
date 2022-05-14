@@ -7,17 +7,17 @@
 [server]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#server-side
 [both]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#both-sides
 
-# **📘 EnvMod Wiki**
+# **📘 EnvMod (Wiki)**
 
-### 🛠️ Configuration
+## 🛠️ Configuration
 Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
 
-### ⛅ Weather types
+## ⛅ Weather types
 To create a new weather type, copy one of the existing weather types in `envmod/Shared/weather_types/` and paste it in the same folder, by remaning it to something unique like `YOUR_NEW_WEATHER.lua`
 
 You'll find all the data needed to create your new weather type at the top of the file you just copied.
 
-### 📜 Scripting (Events)
+## 📜 Scripting (Events)
 <details><summary>✨ Events</summary>
 
 ### [🔹🔸][both] `"EnvMod:OnLoaded"`
@@ -88,7 +88,7 @@ Called when the night cycle started
 </details>
 </details>
 
-### 📜 Scripting (Functions)
+## 📜 Scripting (Functions)
 
 <details><summary>⛅ Weather functions</summary>
 

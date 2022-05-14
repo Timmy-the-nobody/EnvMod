@@ -4,7 +4,7 @@
 As its name suggests, EnvMod is a mod to extend the environment possibilities in Nanos World.
 
 ## 📘 Wiki
-You can find the documentation for events and functions [here.][1]
+You can find the documentation for EnvMod [here.][1]
 
 ## 🐛 Bugs/Requests
 If you found a bug or have a feature request please open a [new issue.][2]
