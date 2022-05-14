@@ -7,10 +7,18 @@
 [server]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#server-side
 [both]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#both-sides
 
-# **EnvMod API**
+# **📘 EnvMod Wiki**
 
-## Events
-<details><summary>🔥 Events list</summary>
+### 🛠️ Configuration
+Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
+
+### ⛅ Weather types
+To create a new weather type, copy one of the existing weather types in `envmod/Shared/weather_types/` and paste it in the same folder, by remaning it to something unique like `YOUR_NEW_WEATHER.lua`
+
+You'll find all the data needed to create your new weather type at the top of the file you just copied.
+
+### 📜 Scripting (Events)
+<details><summary>✨ Events</summary>
 
 ### [🔹🔸][both] `"EnvMod:OnLoaded"`
 ###### Called once EnvMod if fully loaded
@@ -80,16 +88,16 @@ Called when the night cycle started
 </details>
 </details>
 
-## Functions
+### 📜 Scripting (Functions)
 
 <details><summary>⛅ Weather functions</summary>
 
 ### [🔹🔸][both] `EnvMod:SetWeather( xWeather )`
 Set the current weather type (will be networked to all players when called on server)
 ###### Parameters
-| Type                          | Parameter         | Default Value     | Description  |
-| --------------------          |:----------------  |:----------------- |:------------- 
-| [number] or [string]          | xWeather          |                   | Weather type (ID or name)
+| Type                  | Parameter         | Default Value     | Description  |
+| --------------------  |:----------------  |:----------------- |:------------- 
+| [number] or [string]  | xWeather          |                   | Weather type (ID or name)
 ###### Returns
 | Type                  | Description  |
 | --------------------  |:------------- 
