@@ -9,6 +9,16 @@
 
 **📘 EnvMod Wiki**
 
+## 📦 Installation
+- Download EnvMod and add it in the `/Server/Packages/` folder on your server
+- Then go to `/Server/Config.toml` and add `envmod` (or the package name) in the `packages` array.
+- Download [EnvMod assets pack](https://github.com/Timmy-the-nobody/EnvMod-assets) and install it in `/Server/Assets`
+
+#### Note for scripters: 
+You'll only be able to use EnvMod functions in the script package if you load it that way, if you want to be able to use EnvMod methods in another package use [`Package.RequirePackage`](https://docs.nanos.world/docs/scripting-reference/static-classes/package#requirepackage) in the other package.
+
+Unlike functions, EnvMod events will be sent to all packages
+
 ## 🛠️ Configuration
 Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
 
@@ -261,18 +271,6 @@ Returns the formatted date
 
 <details><summary>💨 Wind functions</summary>
 
-<!-- ### [🔹][server] `EnvMod:SetWindSpeed( fSpeed )`
-Set the actual wind speed (will be networked to all players)
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number][number]           | fSpeed            |                   | The wind speed to set
-### [🔹][server] `EnvMod:SetWindDirection( fDirection )`
-Set the actual wind direction between -180 and 180 (will be networked to all players)
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number][number]           | fDirection        |                   | The wind direction to set -->
 ### [🔹🔸][both] `EnvMod:GetWindSpeed()`
 Get the current wind speed
 ###### Returns
@@ -307,14 +305,6 @@ Return the actual formatted wind direction (N/E, S/W, N, etc..)
 </details>
 
 <details><summary>🌡️ Temperature functions</summary>
-
-<!-- ### [🔹][server] `EnvMod:SetTemperature( fTemperature, bFahrenheit )`
-Set the current temperature on the server (will be networked to all players)
-###### Parameters
-| Type                  | Parameter         | Default Value     | Description  |
-| --------------------  |:----------------  |:----------------- |:------------- 
-| [number]              | fTemperature      |                   | The temperature to set
-| [boolean]             | bFahrenheit       | `false`           | Use the fahrenheit unit instead of celcius -->
 
 ### [🔹🔸][both] `EnvMod:GetTemperature( bFahrenheit )`
 Get the current temperature
