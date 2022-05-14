@@ -7,7 +7,7 @@
 [server]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#server-side
 [both]:https://docs.nanos.world/docs/next/core-concepts/scripting/authority-concepts#both-sides
 
-# **📘 EnvMod (Wiki)**
+**📘 EnvMod Wiki**
 
 ## 🛠️ Configuration
 Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
