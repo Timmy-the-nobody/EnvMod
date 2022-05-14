@@ -11,7 +11,8 @@ EnvMod.Cfg.Time24hCycle = 7200                                          -- How l
 EnvMod.Cfg.TimeNightStart = 22                                          -- Night start in in-game hours
 EnvMod.Cfg.TimeDayLength = 16                                           -- Day duration in in-game hours
 EnvMod.Cfg.TimeOnLoad = 6                                               -- Time on server start in in-game hours
-EnvMod.Cfg.YearStart = 2022
+EnvMod.Cfg.YearStart = 2022                                             -- First year on init
+EnvMod.Cfg.DayStart = 1                                                 -- First day on init (1, 365)
 
 --[[ Weather config ]]--
 

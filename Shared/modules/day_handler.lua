@@ -29,20 +29,6 @@ end
 
 --[[
 
-    EnvMod:SetDay
-        desc: Set the current day
-        return: Day (number)
-
-]]--
-
-function EnvMod:SetDay( iDay )
-    if iDay and ( type( iDay ) == "number" ) then
-        self:SetNWVar( "day", math.floor( math.max( iDay, 1 ) ) )
-    end
-end
-
---[[
-
     EnvMod:GetDate
         desc: Get the day, month and year based on a day value
         args: [Day (number), Added years (number/internal)]
