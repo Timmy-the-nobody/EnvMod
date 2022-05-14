@@ -3,7 +3,7 @@
 EnvMod.Cfg.Language = "en"                                              -- Script language ("en", "fr")
 EnvMod.Cfg.AMPMClock = false                                            -- Time format (`true` for 12h AM/PM clock, `false` for 24h clock)
 EnvMod.Cfg.MMDDYYYYCalendar = false                                     -- Date format (`true` for MM-DD-YYYY, `false` for DD/MM/YYYY)
-EnvMod.Cfg.DrawDebugCanvas = true                                       -- Draw EnvMod infos in top right corner
+EnvMod.Cfg.DrawDebugCanvas = false                                      -- Draw EnvMod infos in top right corner
 
 --[[ Timecycle config ]]--
 
