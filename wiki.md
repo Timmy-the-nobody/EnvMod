@@ -14,21 +14,20 @@
 - Then go to `/Server/Config.toml` and add `envmod` (or the package name) in the `packages` array.
 - Download [EnvMod assets pack](https://github.com/Timmy-the-nobody/EnvMod-assets) and install it in `/Server/Assets`
 
-#### Note for scripters: 
-You'll only be able to use EnvMod functions in the script package if you load it that way, if you want to be able to use EnvMod methods in another package use [`Package.RequirePackage`](https://docs.nanos.world/docs/scripting-reference/static-classes/package#requirepackage) in the other package.
-
+> #### Note for scripters: 
+> You'll only be able to use EnvMod functions in the script package if you load it that way, if you want to be able to use EnvMod methods in another package use [`Package.RequirePackage`](https://docs.nanos.world/docs/scripting-reference/static-classes/package#requirepackage) in the other package.
 Unlike functions, EnvMod events will be sent to all packages
 
 ## 🛠️ Configuration
-Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
+- Edit the script to your liking by going to `envmod/Shared/config.lua`, some settings require a server restart
 
 ## 🖥️ Console commands
-Type `envmod help` in your server-side console to display all available commands, their arguments and their descriptions.
+- Type `envmod help` in your server-side console to display all available commands, their arguments and their descriptions.
 
 ## ⛅ Weather types
-To create a new weather type, copy one of the existing weather types in `envmod/Shared/weather_types/` and paste it in the same folder, by remaning it to something unique like `YOUR_NEW_WEATHER.lua`
+- To create a new weather type, copy one of the existing weather types in `envmod/Shared/weather_types/` and paste it in the same folder, by remaning it to something unique like `YOUR_NEW_WEATHER.lua`
 
-You'll find all the data needed to create your new weather type at the top of the file you just copied.
+- You'll find all the data needed to create your new weather type at the top of the file you just copied.
 
 ## 📜 Scripting (Events)
 <details><summary>✨ Events</summary>
