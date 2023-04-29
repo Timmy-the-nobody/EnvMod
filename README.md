@@ -1,3 +1,5 @@
+### ⚠️ This package was made on an old nanos world version, most of it's features are now obsolete since they were added natively into the game (not to mention all the possible deprecated functions/events called by this script)
+
 # ⛅ EnvMod
 As its name suggests, EnvMod is a mod to extend the environment possibilities in Nanos World!
 
